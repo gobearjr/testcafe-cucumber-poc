@@ -1,0 +1,26 @@
+{
+  "name": "testcafe-cucumber-poc",
+  "version": "1.0.0",
+  "description": "web automation testing with testcafe",
+  "main": "index.js",
+  "scripts": {
+    "test-cucumber": "node_modules/.bin/gherkin-testcafe chrome page-objects/step_definitions/*.js page-objects/features/*.feature",
+    "test:chrome": "testcafe chrome ./test -s takeOnFails=true --disable-page-caching --skip-js-errors",
+    "test-headless": "node_modules/.bin/gherkin-testcafe chrome:headless page-objects/step_definitions/*.js page-objects/features/*.feature"
+  },
+  "keywords": [
+    "testcafe",
+    "web",
+    "automation"
+  ],
+  "author": "Fatur",
+  "license": "ISC",
+  "dependencies": {
+    "cucumber": "^5.1.0",
+    "eslint": "^4.19.1",
+    "gherkin-testcafe": "^2.5.2",
+    "npm": "^6.0.0",
+    "testcafe": "^1.8.4",
+    "dotenv": "^8.2.0"
+  }
+}
